@@ -7,7 +7,7 @@ public class Launcher {
 
     public static void main(String[] args){
 
-        String urlstr = "http://store.steampowered.com/agecheck/app/637650";
+        String urlstr = "http://store.steampowered.com/app/637650";
         //637650
         //524220
         //374320

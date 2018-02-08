@@ -34,6 +34,27 @@ public class HTMLs {
         }
     }
 
+    public static String saveToString(HttpURLConnection con){
+
+        if(null != con) {
+
+            try {
+                int len = 0;
+                byte[] buffer = new byte[4096];
+                InputStream is = con.getInputStream();
+                ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                while((len = is.read(buffer)) != -1){
+                    bos.write(buffer, 0, len);
+                }
+                return bos.toString();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
     public static String readFile() {
 
         try

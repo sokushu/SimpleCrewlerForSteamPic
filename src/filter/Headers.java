@@ -36,6 +36,18 @@ public class Headers {
         return null;
     }
 
+    public static String getSessionId(HttpURLConnection con){
+
+        String setCookie = con.getHeaderField("Set-Cookie");
+        String regex = "(?<=sessionid=)\\w{24}";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(setCookie);
+        if (matcher.find()){
+            return matcher.group(0);
+        }
+        return null;
+    }
+
     public static void showResponseHeaders(HttpURLConnection con){
 
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
