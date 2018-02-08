@@ -63,7 +63,7 @@ public class HTMLs {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str1);
         while (matcher.find()){
-            System.out.println(matcher.group(0));
+            //System.out.println(matcher.group(0));
             results.add(matcher.group(0));
         }
         System.out.println("catch_1 over");
