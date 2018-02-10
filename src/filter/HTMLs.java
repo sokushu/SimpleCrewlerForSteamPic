@@ -100,7 +100,7 @@ public class HTMLs {
 
     public static List<String> catch_1(String str1){
 
-        List<String> results = new ArrayList<String>();
+        List<String> results = new ArrayList<>();
         String regex = "(?<=<div class=\"screenshot_holder\">)[a-z0-9A-Z_./:?&\\ \t\n\r\"<>=-]*?(?=</div>)";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str1);
@@ -114,7 +114,7 @@ public class HTMLs {
 
     public static List<String> catch_2(List<String> str2){
 
-        List<String> results = new ArrayList<String>();
+        List<String> results = new ArrayList<>();
         for (String str : str2) {
 
             String regex = "(?<=url=)[a-z0-9A-Z_./:?&\\ \t\n\r\"<>=-]*?(?=\")";

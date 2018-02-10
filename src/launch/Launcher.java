@@ -2,6 +2,7 @@ package launch;
 
 import filter.HTMLs;
 import link.Connector;
+import link.Connector2;
 
 public class Launcher {
 
@@ -14,7 +15,8 @@ public class Launcher {
         //668630
         //570
 
-        new Connector().sentRequest(urlstr);
+        //new Connector().sentRequest(urlstr);
+        new Connector2().sentRequest();
 
     }
 }
