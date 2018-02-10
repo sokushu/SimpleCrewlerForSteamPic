@@ -15,8 +15,6 @@ public class Launcher {
         //570
 
         new Connector().sentRequest(urlstr);
-        //HTMLs.readFile();
-        //HTMLs.catch_1(HTMLs.readFile());
-        HTMLs.catch_2(HTMLs.catch_1(HTMLs.readFile()));
+
     }
 }

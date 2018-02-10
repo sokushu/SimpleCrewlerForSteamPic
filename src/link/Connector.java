@@ -66,9 +66,8 @@ public class Connector {
                         responseCode = con.getResponseCode();
                         System.out.println(responseCode + "---" + con.getRequestMethod() + " : " + con.getURL());
                         if(200 == responseCode){
-                            HTMLs.saveToFile(con);//写入文件
-                            //System.out.println(HTMLs.saveToString(con));
-                            //HTMLs.catch_2(HTMLs.catch_1(HTMLs.saveToString(con)));
+
+                            HTMLs.catch_2(HTMLs.catch_1(HTMLs.saveToString(con)));
                         }
                         else{
                             System.out.println("return 4");

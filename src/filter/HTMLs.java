@@ -32,26 +32,47 @@ public class HTMLs {
                 e.printStackTrace();
             }
         }
+        else {
+            System.out.println("save to file fail, con = null");
+        }
+    }
+
+    public static void saveToFile_2(String str){
+
+        try
+        {
+            File file = new File("test2.html");
+            PrintWriter pw = new PrintWriter(file);
+            pw.print(str);
+            pw.flush();
+            pw.close();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static String saveToString(HttpURLConnection con){
 
         if(null != con) {
 
+            int len;
+            byte[] buffer = new byte[4096];
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
             try {
-                int len = 0;
-                byte[] buffer = new byte[4096];
                 InputStream is = con.getInputStream();
-                ByteArrayOutputStream bos = new ByteArrayOutputStream();
                 while((len = is.read(buffer)) != -1){
                     bos.write(buffer, 0, len);
                 }
-                return bos.toString();
             }
             catch (IOException e) {
                 e.printStackTrace();
             }
+            //System.out.println("begin:" + bos.toString());
+            return bos.toString();
         }
+        System.out.println("save to string fail, con = null");
         return null;
     }
 
@@ -59,7 +80,7 @@ public class HTMLs {
 
         try
         {
-            BufferedReader reader = new BufferedReader(new FileReader("test.html"));
+            BufferedReader reader = new BufferedReader(new FileReader("test2.html"));
             StringBuilder result=new StringBuilder();
             String line=null;
             while(( line = reader.readLine()) != null){
@@ -80,7 +101,7 @@ public class HTMLs {
     public static List<String> catch_1(String str1){
 
         List<String> results = new ArrayList<String>();
-        String regex = "(?<=<div class=\"screenshot_holder\">)[a-z0-9A-Z_./:?&\\ \t\n\"<>=-]*?(?=</div>)";
+        String regex = "(?<=<div class=\"screenshot_holder\">)[a-z0-9A-Z_./:?&\\ \t\n\r\"<>=-]*?(?=</div>)";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str1);
         while (matcher.find()){
@@ -96,7 +117,7 @@ public class HTMLs {
         List<String> results = new ArrayList<String>();
         for (String str : str2) {
 
-            String regex = "(?<=url=)[a-z0-9A-Z_./:?&\\ \t\n\"<>=-]*?(?=\")";
+            String regex = "(?<=url=)[a-z0-9A-Z_./:?&\\ \t\n\r\"<>=-]*?(?=\")";
             Pattern pattern = Pattern.compile(regex);
             Matcher matcher = pattern.matcher(str);
             while (matcher.find()){
