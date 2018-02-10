@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URLEncoder;
 
-public class Connector {
+public class Connector1 {
 
     private HttpURLConnection con;
     private int responseCode;

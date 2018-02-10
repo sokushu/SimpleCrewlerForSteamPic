@@ -1,22 +1,19 @@
 package launch;
 
-import filter.HTMLs;
-import link.Connector;
-import link.Connector2;
+import link.ConManager;
 
 public class Launcher {
 
     public static void main(String[] args){
 
-        String urlstr = "http://store.steampowered.com/app/637650";
+        String urlstr = "http://store.steampowered.com/app/220";
         //637650
         //524220
         //374320
         //668630
         //570
-
-        //new Connector().sentRequest(urlstr);
-        new Connector2().sentRequest();
+        //292030
+        new ConManager().getPic(urlstr);
 
     }
 }

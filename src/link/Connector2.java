@@ -12,7 +12,7 @@ public class Connector2 {
     private int responseCode;
     private String cookies;
     private String sessionid;
-    private String urlstr = "http://store.steampowered.com/app/292030";
+    //private String urlstr = "http://store.steampowered.com/app/292030";
 
     /*
         思路：
@@ -29,7 +29,7 @@ public class Connector2 {
 
      */
 
-    public void sentRequest(){
+    public void sentRequest(String urlstr){
 
         String location = urlstr;
         try
