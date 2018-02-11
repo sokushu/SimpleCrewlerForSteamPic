@@ -54,7 +54,7 @@ public class Download {
         }
 
     }
-    public static String filename(String imgUrl){
+    private static String filename(String imgUrl){
         String[] pic = {".jpg",".png",".jpeg",".JPG",".JPEG",".PNG",".gif",".GIF",".bmp",".BMP"};
         String filename = "";
         for (int i = 0; i < pic.length; i++) {
