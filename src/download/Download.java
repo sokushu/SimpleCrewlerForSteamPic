@@ -46,7 +46,7 @@ public class Download {
             fileout.write(data);
             fileout.close();
             inputStream.close();
-            System.out.print("OK( ^v^ )b " + FilePath + filename);
+            System.out.print("OK( ^v^ )b " + FilePath + File.separator + filename);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
