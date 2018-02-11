@@ -7,6 +7,10 @@ src/launch/ : 程序启动入口
 
 src/link/ : HTTP连接处理
 
+src/download/ : 单线程下载处理。
+
+    `new Download(String[] 图片URL, String 保存路径)；`
+
 图片链接显示在console
 
 这个分支将进行简易的封装
