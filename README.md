@@ -1,5 +1,4 @@
 # CrewlTest3
-<<<<<<< HEAD
 **爬取steam游戏/应用的滚动大图**
 
 src/filter/ : 字符过滤，文件处理
@@ -13,5 +12,3 @@ src/link/ : HTTP连接处理
 这个分支将进行简易的封装
 
 完善了验证方式，共计3种
-=======
->>>>>>> remotes/origin/master

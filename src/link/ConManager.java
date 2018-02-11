@@ -17,7 +17,7 @@ public class ConManager {
 
         try
         {
-            String location = urlstr;
+            location = urlstr;
             con = ToGet.sentGET(location, null);
             responseCode = con.getResponseCode();
             System.out.println(responseCode + "---" + con.getRequestMethod() + " : " + con.getURL());
